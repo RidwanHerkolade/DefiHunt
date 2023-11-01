@@ -1,0 +1,56 @@
+.marketfile__divs {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 4rem);
+    background: yellow;
+}
+.marketfile__div {
+    flex: 1.2;
+    background: black;
+    justify-content: center;
+}
+.product__name {
+    color: var(--color-white);
+}
+.file__images {
+    width: 50%;
+    height: 100%;
+}
+.file__images img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+   
+}
+.file__divs {
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.file__content {
+     margin: 0rem 0.7rem;
+}
+.file__divs h3 {
+    margin: 3rem 0rem;
+    color: var(--color-white);
+    font-size: var(--font-new);
+}
+.product__name {
+    color: var(--color-white);
+    font-size: var(--font-headers);
+}
+.rank {
+    color: var(--color-white);
+    margin: 1rem 0rem;
+    font-size: var(--font-header);
+    font-weight: 700;
+}
+.rank span 
+{
+    font-weight: 500;
+}
+.product__section {
+    flex: 3;
+}

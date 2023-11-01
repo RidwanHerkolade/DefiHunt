@@ -1,0 +1,70 @@
+.header__divs {
+    width: 100%;
+    min-height: calc(80vh - 4.5rem);
+    background: var(--color-blackie);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header__div {
+   text-align: center;
+}
+h2 {
+    color: var(--color-white);
+    text-transform: capitalize;
+    font-size: var(--font-new);
+    text-transform: capitalize;
+}
+.header__div p {
+    text-transform: capitalize;
+    color: var(--color-grey);
+    font-size: var(--font-small);
+    line-height: 5rem;
+}
+.trend__divs {
+    color: yellow;
+    font-weight: 700;
+
+}
+.loading {
+    color: var(--color-orange);
+}
+.name {
+    color: var(--color-orange);
+}
+
+TREND DATA STYLES */
+.trend__divss {
+    display: flex;
+    justify-content: center;
+}
+.name__img {
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    height: 6rem;
+}
+.name__divs {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.name__img img {
+    width: 100%;
+    border-radius: 6rem;
+    height: 100%;
+    object-fit: cover;
+}
+.coin__name {
+    color: var(--color-orange);
+    margin-top: 0.5rem;
+    font-size: var(--font-logos);
+    
+}
+.coin__price {
+    color: var(--color-orange);
+    margin-top: 0.5rem;
+    font-size: var(--font-logos);
+}
