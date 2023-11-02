@@ -68,3 +68,46 @@ TREND DATA STYLES */
     margin-top: 0.5rem;
     font-size: var(--font-logos);
 }
+
+@media  (min-width: 768px) and  (max-width: 991px) {
+    .header__divs {
+        min-height: calc(55vh - 4rem);
+    }
+  
+}
+@media  (min-width: 992px) and  (max-width: 1199px) {
+    .header__divs {
+        min-height: calc(79vh - 4rem);
+    }
+  
+    
+}
+@media  (min-width: 1200px) and  (max-width: 1919px) {
+    .header__divs {
+        min-height: calc(69vh - 4rem);
+    }
+    .header__div p {
+        font-size: var(--font-folds);
+    }
+
+}
+
+@media (min-width: 1920px) 
+{
+    .header__divs {
+        min-height: calc(65vh - 4rem);
+    }    .header__div p {
+        font-size: var(--font-folds);
+    }
+    .header__div p {
+        font-size: var(--font-folds);
+    }
+    h2 {
+        font-size: var(--font-news);
+    }
+    .header__div p {
+        font-size: var(--font-folds);
+        line-height: 5rem;
+    }
+
+}

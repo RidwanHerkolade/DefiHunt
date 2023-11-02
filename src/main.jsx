@@ -9,7 +9,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
         <BrowserRouter>
-        <Nav/>  
+         <Nav/>  
          <Routes>
              <Route path="/" element={<App/>}/>
              <Route path="/market/:id" element={<MarketFile/>}/>

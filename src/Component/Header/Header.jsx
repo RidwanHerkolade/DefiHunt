@@ -3,6 +3,7 @@ import "./Header.css";
 import TrendData from "./TrendData";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
+import { CircularProgress } from "@mui/material";
 // import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
 
@@ -32,13 +33,11 @@ const Header = () => {
       <div className="trend__divs">
          <Splide options={{perPage: "4", gap: "5rem", drag: 'free', arrows: false,  autoScroll: {speed: 1,},  breakpoints: {1024: { perPage: 3, gap: '1rem' },640 : {  perPage: 1, gap: '0rem' }  },}}>
 
-          {isLoading ? <p className="loading">...loading</p> : isTrending.map((trend) => {
+          {isLoading ? <CircularProgress styles={{backgroungColor: "orange"}}/> : isTrending.map((trend) => {
             return (  
               <SplideSlide >
                   <TrendData  key={trend.item.id} trend={trend}/>
                </SplideSlide>
-              
-             
             ) 
           })}
          

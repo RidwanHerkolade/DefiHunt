@@ -4,15 +4,20 @@ import MarketForm from "./MarketForm";
 import { Link } from "react-router-dom";
 import "./Market.css";
 
+export function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+
 const Market = () => {
   const [markets, setMarkets] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [term, setTerm] = useState("");
-  const [filteredMarkets, setFilteredMarkets] = useState([]);
+  const [pages, setPages] = useState(1);
 
   useEffect(() => {
     fetch(
-     `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en`
+      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -29,6 +34,8 @@ const Market = () => {
     });
     setMarkets(filterMarkets);
   }, [term]);
+
+  
   return (
     <div className="market__div">
       <MarketForm searchInput={(isInput) => setTerm(isInput)} />
@@ -43,7 +50,9 @@ const Market = () => {
             </tr>
           </thead>
           <tbody>
-            {markets.map((market) => {
+            {markets.slice((pages - 1) * 10, (pages - 1) * 10 + 10)
+            .map((market) => {
+              const profit = market.price_change_percentage_24h > 0;
               return (
                 <tr key={market.id}>
                   <td>
@@ -61,17 +70,17 @@ const Market = () => {
                   </td>
                   <td>
                     <Link to={`/market/${market.id}`} className="table__links">
-                      ${market.current_price}
+                      ${numberWithCommas(market.current_price.toFixed(2))}
+                    </Link>
+                  </td>
+                  <td >
+                    <Link to={`/market/${market.id}`} className="table__links" style={{color: profit > 0 ? "rgb(14, 203, 129)" : "red"}} >
+                      {profit && "+" }{market.price_change_percentage_24h}%
                     </Link>
                   </td>
                   <td>
                     <Link to={`/market/${market.id}`} className="table__links">
-                      {market.price_change_percentage_24h}
-                    </Link>
-                  </td>
-                  <td>
-                    <Link to={`/market/${market.id}`} className="table__links">
-                      ${market.market_cap}
+                      ${numberWithCommas(market.market_cap.toString().slice(0, 9))}M
                     </Link>
                   </td>
                 </tr>

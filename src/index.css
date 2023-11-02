@@ -7,14 +7,16 @@
    --background1: rgba(183, 4, 133, 0.1);
    --font-family: 'Montserrat', sans-serif;
    --font-familys: 'Pacifico', cursive;
-   --font-fold: 20px;
+   --font-fold: 21px;
+   --font-smalleys: 20px;
+   --font-folds: 23px;
    --font-smallz: 9px;
    --font-smalls: 11px;
    --font-small: 14px;
+   --font-smalley: 16px;
    --font-book: 13px;
    --font-books: 12px;
-   --font-nav: 1rem;
-   
+   --font-nav: 1rem;  
    --font-smallz: 13px;
    --detailBg: #E5E5E5;
    --font-logo: 15px;
@@ -23,6 +25,7 @@
    --font-header: 25px;
    --font-headers: 30px;
    --font-new: 40px;
+   --font-news: 45px;
    --color-grey: #D6DBF5;
    --color-drop: #F5F5F5;
    --color-border: #14161a;

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { HistoricalChart } from "../Component/Config/api";
 import "./marketFile.css"
+import Section from "./Section";
 
 const MarketFile = () => {
   const [isCoins, setIsCoins] = useState({});
@@ -16,8 +18,8 @@ const MarketFile = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        const newCoins= data.find((item) => item.id === id);
-        setIsCoins(newCoins);
+         const newCoins= data.find((item) => item.id === id);
+         setIsCoins(newCoins);
       });
   };
   return (
@@ -36,7 +38,14 @@ const MarketFile = () => {
              </div>
         
       </div>
-      <div className="product__section">hello motherfucker</div>
+      <div className="product__section">
+            hello motherfucker
+            <div className="pro__sec">
+              <Section isCoins={isCoins}/>
+
+            </div>
+      
+      </div>
     </div>
   );
 };

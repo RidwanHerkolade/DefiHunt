@@ -57,3 +57,6 @@ const TrendData = ({trend}) => {
 }
 
 export default TrendData
+
+
+
