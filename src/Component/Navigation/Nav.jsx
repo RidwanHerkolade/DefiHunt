@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <div className="nav__div">
       <nav className="nav">
-        <h1>Crypt hunter</h1>
+        <h1>Defi hunter</h1>
          <div className="select">
               <select>
                    <option>USD</option>

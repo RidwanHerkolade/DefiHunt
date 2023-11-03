@@ -31,9 +31,9 @@ const Header = () => {
       </div>
       
       <div className="trend__divs">
-         <Splide options={{perPage: "4", gap: "5rem", drag: 'free', arrows: false,  autoScroll: {speed: 1,},  breakpoints: {1024: { perPage: 3, gap: '1rem' },640 : {  perPage: 1, gap: '0rem' }  },}}>
+         <Splide options={{perPage: "4", gap: "4rem", drag: 'free', arrows: false,  autoScroll: {speed: 1,},  breakpoints: {1024: { perPage: 3, gap: '1rem' } , 768:  { perPage: 3, gap: '0rem' }, 640 : {  perPage: 1, gap: '0rem' }, 480: {perPage: 1, gap: "0rem"}  },}}>
 
-          {isLoading ? <CircularProgress styles={{backgroungColor: "orange"}}/> : isTrending.map((trend) => {
+          {isLoading ? <CircularProgress styles={{color: "orange"}}/> : isTrending.map((trend) => {
             return (  
               <SplideSlide >
                   <TrendData  key={trend.item.id} trend={trend}/>

@@ -1,7 +1,6 @@
 .nav__div {
     width: 100%;
     background: var(--color-border);
-    /* box-shadow: var(--box-shadow); */
 }
 .nav {
     display: flex;
@@ -28,13 +27,54 @@ select {
     gap: 1rem;
     align-items: center;
 }
-h1 {
+.nav h1 {
     color: var(--color-orange);
+    font-size: var(--font-folds);
 }
 .links {
     background: var(--color-orange);
+    font-size: var(--font-smalls);
     color: var(--color-blackie);
     font-weight: 700;
     border-radius: 0.4rem;
     padding: 0.7rem 0.9rem;
+}
+
+@media screen and (max-width: 480px) {
+    .nav {
+        margin: 0rem 0rem;
+        padding: 1rem 0.5rem;
+    }
+    
+
+}
+@media  (min-width: 481px) and  (max-width: 767px) {
+  
+   
+
+    
+}
+
+
+@media (min-width: 768px) and (max-width: 992px){
+    .nav {
+        margin: 0rem 1rem;
+        padding: 1rem;
+    }
+
+}
+@media (min-width: 1920px) {
+    .nav h1 {
+        color: var(--color-orange);
+        font-size: var(--font-btnss);
+    }
+    .links {
+        font-size: var(--font-headers);
+        padding: 0.7rem 2rem;
+    }
+    select {
+        padding: 0.7rem 1rem;
+        font-size: var(--font-headers);
+
+    }
 }

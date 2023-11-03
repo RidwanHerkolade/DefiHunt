@@ -24,27 +24,31 @@
 }
 
 .form__divs input {
-    width: 96%;
+    width: 100%;
     outline: none;
     border: 0.2px solid var(--color-white);
     color: var(--color-white);
     font-size: var(--font-fold);
     text-transform: capitalize;
-    padding: 1.2rem 1rem;
+    padding: 1.2rem 0.5rem;
     border-radius: 0.4rem;
     background: transparent;
 }
 .form__divs input::placeholder {
     color: var(--color-white);
+    padding: 0rem 0.6rem;
     font-size: var(--font-fold);
     text-transform: capitalize;
 }
+
+
 
 
 /* TABLE STYLING */
 
 .table__div {
     width: 100%;
+    overflow-x: auto;
 }
 .table__divs {
     flex-direction: column;
@@ -123,10 +127,63 @@ tbody td {
 }
 
 /* TABLET /  MOBILE / DESKTOP RESPONSIVENESS */
+@media screen and (max-width: 480px) {
+    .market__div {
+        padding: 3rem 0.5rem;
+    }
+    .form__divs input {
+        padding: 0.4rem 0rem;
+    }
+    .form__divs input::placeholder {
+        color: var(--color-white);
+        font-size: var(--font-small);    
+
+    }
+    .marketform__div {
+        margin: 0rem 2rem;
+    }
+   
+    .marketform__div h1 {
+        font-size: var(--font-fold);
+        line-height: 30px;
+    }
+
+    
+
+}
+@media  (min-width: 481px) and  (max-width: 767px) {
+    .market__div {
+        padding: 3rem 1rem;
+    }
+    .form__divs input {
+        padding: 0.5rem 0.5rem;
+    }
+    .form__divs input::placeholder {
+        color: var(--color-white);
+        font-size: var(--font-small);    
+
+    }
+    .marketform__div {
+        margin: 0rem 2rem;
+    }
+   
+    .marketform__div h1 {
+        font-size: var(--font-fold);
+        line-height: 30px;
+    }
+  
+   
+
+    
+}
 @media  (min-width: 768px) and  (max-width: 991px) {
     .market__div {
-        padding: 3rem 2rem;
+        padding: 3rem 1rem;
     }
+    .td__name .p {
+        font-size: var(--font-fold);
+    }
+    
 }
 @media  (min-width: 992px) and  (max-width: 1199px) {
     .market__div {
@@ -149,15 +206,39 @@ tbody td {
     }
     .td__name .p {
         font-size: var(--font-folds);
-    
     }
     .table__links {
         color: var(--color-white);
         font-size: var(--font-fold);
     }
-  
 }
 @media (min-width: 1920px) 
 {
+    thead th {
+        font-size: var(--font-foldss);
+        padding: 1rem 1rem;
+       text-align: left;
+    }
+    tbody td {
+        font-size: var(--font-foldss);
+    
+    }
+    .td__name .acronyms {
+        font-size: var(--font-foldss);
+        font-weight: 700;
+    }
+    .td__name .p {
+        font-size: var(--font-foldss);
+    
+    }
+    .table__links {
+        color: var(--color-white);
+        font-size: var(--font-foldss);
+    }
+    .table_img {
+        width: 6rem;
+        height: 6rem;
+    
+    }
 
 }
